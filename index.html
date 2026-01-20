@@ -30,10 +30,10 @@
         transparent 0 70%,
         rgba(40,245,154,.04) 70% 78%,
         rgba(40,245,154,.18) 78% 82%,
-        rgba(40,245,154,.28) 82% 84%,
+        rgba(40,245,154,.18) 82% 84%,
         rgba(40,245,154,.10) 84% 88%,
         transparent 88% 100%);
-      animation: spin 14s linear infinite;
+      animation: spin 18s linear infinite;
       mix-blend-mode: screen;
       pointer-events:none;
       filter: blur(.2px);
@@ -56,10 +56,12 @@
     <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="h-9 w-9 rounded-xl border border-white/10 bg-white/5 grid place-items-center font-semibold">RP</div>
-        <div>
-          <div class="text-sm font-semibold">Radar Político</div>
-          <div class="text-xs text-white/60">Interface imersiva • minimalista</div>
-        </div>
+<div>
+  <div class="text-sm font-semibold">Radar Político</div>
+  <div class="hidden sm:block text-xs text-white/60">
+    Interface imersiva • minimalista
+  </div>
+</div>
       </div>
       <nav class="hidden sm:flex gap-6 text-sm text-white/70">
         <a href="./index.html" class="hover:text-white">Início</a>
@@ -70,7 +72,7 @@
   </header>
 
   <!-- Conteúdo -->
-  <main class="max-w-7xl mx-auto px-4 py-10 sm:py-14">
+  <main class="max-w-7xl mx-auto px-4 py-6 sm:py-14">
     <section class="grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs text-white/70">
@@ -86,8 +88,8 @@
           Um portal responsivo para acompanhar mapas, camadas e sinais — mantendo clareza, estética sóbria e rastreabilidade.
         </p>
 
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="./dashboard.html" class="px-4 py-3 rounded-2xl bg-white text-black font-medium text-sm hover:opacity-90 transition">
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:max-w-none max-w-sm">
+          <a href="./dashboard.html" class="w-full sm:w-auto px-4 py-3 rounded-2xl bg-white text-black font-medium text-sm text-center">
             Abrir dashboard
           </a>
           <a href="./fontes.html" class="px-4 py-3 rounded-2xl border border-white/10 bg-white/5 text-white/80 text-sm hover:bg-white/10 transition">
@@ -153,7 +155,7 @@
       </div>
     </section>
 
-    <footer class="mt-12 sm:mt-16 pb-10 text-xs text-white/50">
+    <footer class="mt-16 pb-12 text-xs text-white/50 text-center">
       © <span id="year"></span> Radar Político
     </footer>
   </main>
