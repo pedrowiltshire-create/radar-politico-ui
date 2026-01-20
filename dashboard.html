@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dashboard • Radar Político</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body{ margin:0; background:#0b0f14; color:#e6edf3; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; overflow:hidden; }
+    .bg{ position:fixed; inset:0; z-index:-10; background:linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.78), rgba(0,0,0,.92)); }
+    .map{ position:absolute; inset:0; background:url("./assets/map.svg") center/cover no-repeat; opacity:.12; transform:scale(1.03); }
+    .radar{ position:absolute; inset:-25%;
+      background:conic-gradient(from 0deg, transparent 0 70%, rgba(40,245,154,.04) 70% 78%, rgba(40,245,154,.18) 78% 82%, rgba(40,245,154,.28) 82% 84%, rgba(40,245,154,.10) 84% 88%, transparent 88% 100%);
+      animation:spin 14s linear infinite; mix-blend-mode:screen; pointer-events:none;
+    }
+    @keyframes spin{ to{ transform:rotate(360deg);} }
+  </style>
+</head>
+<body>
+  <div class="fixed inset-0 -z-10">
+    <div class="map"></div>
+    <div class="radar"></div>
+    <div class="bg"></div>
+  </div>
+
+  <header class="sticky top-0 z-20 backdrop-blur-md bg-black/35 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl border border-white/10 bg-white/5 grid place-items-center font-semibold">RP</div>
+        <div>
+          <div class="text-sm font-semibold">Radar Político</div>
+          <div class="text-xs text-white/60">Dashboard GIS</div>
+        </div>
+      </div>
+      <nav class="hidden sm:flex gap-6 text-sm text-white/70">
+        <a href="./index.html" class="hover:text-white">Início</a>
+        <a href="./dashboard.html" class="hover:text-white">Dashboard</a>
+        <a href="./fontes.html" class="hover:text-white">Fontes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-4">
+    <div class="rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md"
+         style="height: calc(100vh - 96px);">
+      <iframe
+        src="https://gis.radarpolitico.org/portal/apps/experiencebuilder/experience/?id=1c71651ddc4842a585a30dbdbd451a9c"
+        class="w-full h-full"
+        style="border:0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+</body>
+</html>
